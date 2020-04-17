@@ -1,0 +1,31 @@
+# vsim -c Testbench 
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 4.15.0-88-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.Testbench
+# Loading work.fsm
+# ** Warning: (vsim-3009) [TSCALE] - Module 'fsm' does not have a `timescale directive in effect, but previous modules do.
+#         Region: :Testbench:UUT
+#                   25  x=0 PS=000 z=1
+#                   30  x=1 PS=000 z=0
+#                   35  x=1 PS=100 z=1
+#                   40  x=0 PS=100 z=0
+#                   45  x=0 PS=010 z=0
+#                   50  x=1 PS=010 z=0
+#                   55  x=1 PS=101 z=1
+#                   60  x=0 PS=101 z=0
+#                   65  x=1 PS=110 z=1
+#                   70  x=0 PS=110 z=0
+#                   75  x=1 PS=111 z=1
+#                   80  x=0 PS=111 z=0
+#                   85  x=0 PS=011 z=0
+#                   90  x=1 PS=011 z=0
+#                   95  x=0 PS=001 z=0
+#                  100  x=1 PS=001 z=0
