@@ -14,181 +14,97 @@ reg Ga, Ya, Ra, Gb, Yb, Rb;
 	begin
 	
 	case ({PS})
-	S0: 
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S0: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S1;
 	end
-	S1:
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S1: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S2;
 	end
-	S2:
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S2: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S3;
 	end
-	S3:
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S3: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S4;
 	end
-	S4:
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S4: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S5;
 	end
-	S5:
-	begin
-		Ga=1'b1;
-		Ya=1'b0;
-		Ra=1'b0;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S5: begin
+		Ga=1'b1;Ya=1'b0;Ra=1'b0;//A=G
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		case({Sb})
 		1'b0:NS=S5;
 		1'b1:NS=S6;
 		endcase
 	end
-	S6:
-	begin
-		Ga=1'b0;
-		Ya=1'b1;
-		Ra=1'b0;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S6: begin
+		Ga=1'b0;Ya=1'b1;Ra=1'b0;//A=Y
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=R
 		NS = S7;
 
 	end
-	S7:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S7: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=G
 		NS = S8;
 	end
-	S8:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S8: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=G
 		NS = S9;
 	end
-	S9:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S9: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=G
 		NS = S10;
 	end
-	S10:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S10: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=G
 		NS = S11;
 	end
-	S11:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b1;
-		Yb=1'b0;
-		Rb=1'b0;
+	S11: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b1;Yb=1'b0;Rb=1'b0;//B=G
 		if(Sa==1'b1 && Sb==1'b0)
 			NS=S11;
 		else
 			NS=S12;
 	end
-	S12:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b0;
-		Yb=1'b1;
-		Rb=1'b0;
+	S12: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b0;Yb=1'b1;Rb=1'b0;//B=Y
 		NS = S0;
 	end
-	S13:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	//Unexpected states: resolving contingencies.
+	S13: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S0;
 	end
-	S14:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S14: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S0;
 	end
-	S15:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	S15: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S0;
 	end
-	4'bxxxx:
-	begin
-		Ga=1'b0;
-		Ya=1'b0;
-		Ra=1'b1;
-		Gb=1'b0;
-		Yb=1'b0;
-		Rb=1'b1;
+	4'bxxxx: begin
+		Ga=1'b0;Ya=1'b0;Ra=1'b1;//A=R
+		Gb=1'b0;Yb=1'b0;Rb=1'b1;//B=R
 		NS = S0;
 	end
 	endcase
